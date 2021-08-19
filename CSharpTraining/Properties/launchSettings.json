@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CSharpTraining": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Shruti\" \"C#\" \"Today\""
+    }
+  }
+}
