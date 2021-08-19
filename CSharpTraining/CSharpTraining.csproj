@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>CSharp.Program</StartupObject>
+    <StartupObject>CSharp.Hide</StartupObject>
   </PropertyGroup>
 
 </Project>
