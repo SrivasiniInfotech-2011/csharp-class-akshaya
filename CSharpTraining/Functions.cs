@@ -1,38 +1,57 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpTraining
 {
     class Functions
     {
+        //<Access_Specifier><Access_Modifier><Return_Type><Function_Name>(<List_of_Comma_Separated_Parameters>)
+        /*
+            Access Specifier: It is optional. If not specified, it is private.
+            Access Modifier: It is also optional.Empty if not specified.
+            Return Type: It is mandatory. Default should be provided as void.
+            Function Name: 
+                1. Any orbitrary name, but shoud not start with a number or special character.
+                2. Same Function name can be repeated for implementing polymorphism.
+            Parameters:
+                1. Similar to a variable, but will not have access specifier.
+                2. It could be of system defined type or user defined type.
+        */
 
-        //<Access Specifier> <Access Modifier> <Return Type> <Function Name>(<comma separated parameters>)
-        public void Add(int a, int b)
+        void Message()
         {
-            Console.WriteLine("The addition of {0} and {1} is {2}", a, b, a + b);
+            Console.Write("This is a Sample Function!");
         }
 
-        public void Add(string a, string b)
+        private void Subract(int a, int b)
         {
-            Console.WriteLine("The concatenation of {0} and {1} is {2}", a, b, a + b);
-        }
-        public void Add(decimal a, decimal b)
-        {
-            Console.WriteLine("The concatenation of {0} and {1} is {2}", a, b, a + b);
+            Console.WriteLine("The subraction of {0} and {1}  is {2}", a, b, a - b);
         }
 
-        private void Message()
+        private void Subract(string a, string b)
         {
-            Console.WriteLine("I am from Message function!");
+            Console.WriteLine("The addition of {0} and {1}  is {2}", int.Parse(a), int.Parse(b), int.Parse(a) + int.Parse(b));
         }
 
-        public int Sum(int a, int b)
+        private void Subract(int a, int b, int c)
+        {
+            Console.WriteLine("The addition of {0} and {1} and {2}  is {3}", a, b, c, a + b + c);
+        }
+
+        private int Sum(int a, int b)
         {
             return a + b;
         }
+        private decimal Add(decimal a,decimal b)
+        {
+            return a + b;
+        }
+
+        private static int Add(int a, int b,out int subraction)
+        {
+            subraction = a - b;
+            return a + b;
+        }
+
         //		//		Value parameter
         public static void Increment(int var2)
         {
@@ -44,13 +63,9 @@ namespace CSharpTraining
             var3++;
         }
 
-        //	OUT Parameter(if u want to return more than one value use out parameter)
-        public static int add(int var1, int var2, out int result,   out string stringResult)
+        public static void func(params int[] arr)
         {
-            stringResult = "Harshni";
-            result = var1 - var2;
-            return var1 + var2;
-
+            Console.WriteLine("No of elements in the array is {0}", arr.Length);
         }
 
         static void Main(string[] args)
@@ -61,7 +76,7 @@ namespace CSharpTraining
 
             objFunctions.Message();
             objFunctions.Add(10, 20);
-            objFunctions.Add("Srivatsan", "Seshadri");
+            objFunctions.Subract("Srivatsan", "Seshadri");
             objFunctions.Add(10.00M, 11.00M);
             int y = objFunctions.Sum(10, 20);
 
@@ -78,19 +93,14 @@ namespace CSharpTraining
             Console.WriteLine("After fn call the value of var3 is {0}  ", var1);
             int a;
             string x;
-            int b = add(10, 20, out a,out x);
+            int b = Add(10, 20, out a);
 
             Console.WriteLine("The Value of result is {0}", b);
             Console.WriteLine("The Value of out parameter is {0}", a);
-            Console.WriteLine("The Value of out string parameter is {0}", x);
-            func(new int[] { 1,2,3,4 });
+            func(new int[] { 1, 2, 3, 4 });
             func(1, 2);
             func(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
-        public static void func(params int[] arr)
-        {
-            Console.WriteLine("No of elements in the array is {0}", arr.Length);
-        }
     }
 }
