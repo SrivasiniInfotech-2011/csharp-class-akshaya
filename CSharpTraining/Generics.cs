@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -121,9 +122,10 @@ namespace CSharp
     //        dObj.Add(4, "Max");
     //        dObj.Add(5, "Ram");
     //        dObj.Add(6, "Madhuri");
+    //        dObj.Add(7, "Shruti");
 
     //        Console.WriteLine(dObj[120]);
-
+    //        Console.WriteLine(dObj[7]);
     //        //print data
     //        for (int i = 1; i <= dObj.Count; i++)
     //        {
@@ -203,7 +205,7 @@ namespace CSharp
 
     //		Reflection
 
-    //public class Program
+    //public class Reflect
     //{
     //    public static void Main(string[] args)
     //    {
@@ -237,7 +239,7 @@ namespace CSharp
     //    {
 
     //    }
-    //    public TestReflection( int a)
+    //    public TestReflection(int a)
     //    {
 
     //    }
@@ -282,8 +284,8 @@ namespace CSharp
     //    static void Main()
     //    {
     //        // Create three-item tuple.
-    //        Tuple<int, string, bool, string,bool> tuple =
-    //            new Tuple<int, string, bool, string,bool>(1, "cat", true, "test",false);
+    //        Tuple<int, string, bool, string, bool> tuple =
+    //            new Tuple<int, string, bool, string, bool>(1, "cat", true, "test", false);
 
     //        // Access tuple properties.
 
@@ -328,6 +330,7 @@ namespace CSharp
             _y.blahblah = 123;
             _y.anju = "Testing";
             _y.harshni = "sample";
+            _y.Shruti = "Shruti";
             // You can call anything on a dynamic variable,
             // ... but it may result in a runtime error.
             Console.WriteLine(_y.Error);

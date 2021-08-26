@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>CSharp.TestUserDefinedException</StartupObject>
+    <StartupObject>CSharp.ProgramDynamic</StartupObject>
   </PropertyGroup>
 
 </Project>
