@@ -3,7 +3,11 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>CSharp.ProgramDynamic</StartupObject>
+    <StartupObject>CSharpTraining.AccessPrivateAssembly</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PrivateAssembly\PrivateAssembly.csproj" />
+  </ItemGroup>
 
 </Project>
