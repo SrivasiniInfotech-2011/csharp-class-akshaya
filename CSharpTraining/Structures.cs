@@ -31,6 +31,8 @@ namespace CSharpTraining
 
     public class Structures
     {
+        //display = (a,b):string=>{}
+        //<access-specifier> <return_type> <method_name>(PARAMS){}
         void Display(int EmployeeId, string FirstName, string MiddleName, string LastName, string DOB)
         {
             Console.WriteLine(string.Format("Employee Id {0},First Name {1},Middle Name {2},Last Name {3},DOB {4}",
@@ -45,11 +47,9 @@ namespace CSharpTraining
 
         public static void Main(string[] args)
         {
-
-            Employee employee1 = new Employee(1, "Guru", "", "Guru", new DateTime(),"Guru");
-            Employee emp1 = new Employee(1, "Anju", "", "Singh", new DateTime(2000, 6, 1),"Anju");
-
-            Employee emp2 = new Employee(2, "Bhoomi", "", "Patel", new DateTime(2000, 6, 1),"Shruti");
+            Employee employee1 = new Employee(1, "Guru", "", "Guru", new DateTime(), "Guru");
+            Employee emp1 = new Employee(1, "Anju", "", "Singh", new DateTime(2000, 6, 1), "Anju");
+            Employee emp2 = new Employee(2, "Akshaya", "", "", new DateTime(2000, 6, 1), "");
 
             Employee[] emp = new Employee[2];
             for (int i = 0; i < emp.Length; i++)
@@ -69,6 +69,7 @@ namespace CSharpTraining
 
             foreach (Employee employee in emp)
             {
+
                 //Since this is a Instance Function, we need to create object of the class to access the method.
                 Structures structures = new Structures();
                 structures.Display(employee.EmployeeId, employee.FirstName, employee.MiddleName, employee.LastName, employee.DOB.ToShortDateString());
@@ -78,5 +79,6 @@ namespace CSharpTraining
             }
             Console.ReadLine();
         }
+
     }
 }

@@ -28,15 +28,15 @@ namespace CSharpTraining
 
             //Console.Write("Enter the number till which you want to get the even numbers:");
             //int a = int.Parse(Console.ReadLine());
-            //int i = 0;
+            //i = 0;
             //while (i <= a)
             //{
             //    if ((i % 2) == 0)
             //        Console.WriteLine("{0} is an even number", i);
             //    i += 1;
             //}
-            int i = 10;
-            //Do
+            //i = 10;
+            ////Do
             //do
             //{
             //    if (i < 0)
@@ -45,7 +45,7 @@ namespace CSharpTraining
             //    i--;
             //} while (i != 10);
 
-            //for (int a = 0; a <= 10; a++)
+            //for (a = 0; a <= 10; a++)
             //{
             //    Console.WriteLine(a);
             //}
@@ -72,6 +72,7 @@ namespace CSharpTraining
             //}
 
             //////foreach
+           
             //foreach (int item in array)
             //{
             //    Console.WriteLine("Value : {0}", item);
@@ -99,24 +100,24 @@ namespace CSharpTraining
             //    Console.WriteLine();
             //}
 
-            int[,] a= new int[2, 2];
-            for (int row = 0; row < 2; row++)
-            {
-                for (int column = 0; column < 2; column++)
-                {
-                    Console.Write("Enter the value in the index: {0},{1}: ", row, column);
-                    a[row, column] = int.Parse(Console.ReadLine());
-                }
-            }
+            //int[,] arr= new int[2, 2];
+            //for (int row = 0; row < 2; row++)
+            //{
+            //    for (int column = 0; column < 2; column++)
+            //    {
+            //        Console.Write("Enter the value in the index: {0},{1}: ", row, column);
+            //        arr[row, column] = int.Parse(Console.ReadLine());
+            //    }
+            //}
 
-            for (int row = 0; row < 2; row++)
-            {
-                for (int column = 0; column < 2; column++)
-                {
-                    Console.Write("{0}\t", a[row, column]);
-                }
-                Console.WriteLine();
-            }
+            //for (int row = 0; row < 2; row++)
+            //{
+            //    for (int column = 0; column < 2; column++)
+            //    {
+            //        Console.Write("{0}\t", arr[row, column]);
+            //    }
+            //    Console.WriteLine();
+            //}
             ArrayList objArray = new ArrayList();
             objArray.Clear();
             objArray.Add(1);
@@ -141,8 +142,8 @@ namespace CSharpTraining
                 }
                 else if (item.GetType() == typeof(ArrayList))
                 {
-                    ArrayList arr = (ArrayList)item;
-                    foreach (var ar in arr)
+                    ArrayList arr1 = (ArrayList)item;
+                    foreach (var ar in arr1)
                     {
                         Console.WriteLine(ar);
                     }
