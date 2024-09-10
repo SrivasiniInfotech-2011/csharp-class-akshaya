@@ -2,7 +2,7 @@
   "profiles": {
     "CSharpTraining": {
       "commandName": "Project",
-      "commandLineArgs": "D:\\Shruti2.txt"
+      "commandLineArgs": "Akshaya\r\nC#\r\nWednesday"
     }
   }
 }
