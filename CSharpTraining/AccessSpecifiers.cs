@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CSharp
-{
+{ }
     /*	Access Specifiers.
      *	Public		-->	Unlimited  Access.
      *	Private		--> The Access is limited  to the class where the keyword is defined.
@@ -17,74 +17,74 @@ namespace CSharp
 			
     */
 
-    //    class Student
+    //class Student
+    //{
+    //    /// <summary>
+    //    /// The main entry point for the application.
+    //    /// </summary>
+
+    //    string name;
+
+    //    public void Assign_dtls()
     //    {
-    //        /// <summary>
-    //        /// The main entry point for the application.
-    //        /// </summary>
+    //        name = "John Joseph";
 
-    //        string name;
-
-    //        public void Assign_dtls()
-    //        {
-    //            name = "John Joseph";
-
-    //        }
-
-    //        public void disp()
-    //        {
-    //            Console.WriteLine("Name of the Student is {0}", name);
-
-    //        }
-
-    //        //By default This is a private method so we can't access the method outside the class.
-    //        //void display()
-    //        internal void display()
-    //        //protected void display()
-    //        //protected internal void display()
-    //        {
-    //            Console.WriteLine("Name of the Student is {0}", name);
-
-    //        }
-
-    //        //[STAThread]
-    //        private static void Main(string[] args)
-    //        {
-    //            Student stu = new Student();
-    //            stu.Assign_dtls();
-    //            stu.disp();
-    //            stu.display();
-    //            //with in the class it will work but outside the class it will not work because it is private.
-    //        }
     //    }
 
-
-
-    //    class Access_student
+    //    public void disp()
     //    {
-    //        Student a = new Student();
-
-    //        public void Disp_details()
-    //        {
-    //            a.disp(); // public method we can access any were(access is not limited)
-    //            a.display(); //using internal keyword we can access the private function 
-    //                         //			can be accessed from the same project and not from outside the projectt.
-
-    //        }
-
-    //        public void Assign_det()
-    //        {
-    //            a.Assign_dtls();
-    //        }
-
-    //        private static void Main(string[] args)
-    //        {
-    //            Access_student stud = new Access_student();
-    //            stud.Assign_det();
-    //            stud.Disp_details();
-    //        }
+    //        Console.WriteLine("Name of the Student is {0}", name);
 
     //    }
+
+    //    //By default This is a private method so we can't access the method outside the class.
+    //    //void display()
+    //    //internal void display()
+    //    //protected void display()
+    //    protected internal void display()
+    //    {
+    //        Console.WriteLine("Name of the Student is {0}", name);
+
+    //    }
+
+    //    //[STAThread]
+    //    //private static void Main(string[] args)
+    //    //{
+    //    //    Student stu = new Student();
+    //    //    stu.Assign_dtls();
+    //    //    stu.disp();
+    //    //    stu.display();
+    //    //    //with in the class i7t will work but outside the class it will not work because it is private.
+    //    //}
+    //}
+
+
+
+    //class Access_student
+    //{
+    //    Student a = new Student();
+
+    //    public void Disp_details()
+    //    {
+    //        a.disp(); // public method we can access any were(access is not limited)
+    //        a.display(); //using internal keyword we can access the private function 
+    //                     //			can be accessed from the same project and not from outside the projectt.
+
+    //    }
+
+    //    public void Assign_det()
+    //    {
+    //        a.Assign_dtls();
+    //    }
+
+    //    private static void Main(string[] args)
+    //    {
+    //        Access_student stud = new Access_student();
+    //        stud.Assign_det();
+    //        stud.Disp_details();
+    //    }
+
+    //}
     //}
 
     ////				Inheritence
@@ -92,42 +92,43 @@ namespace CSharp
 
     //	Single Inheritence
 
-    //    class Car
+    //class Car
+    //{
+    //    string ModelNumber;
+    //    string CarCategory;
+    //    string CarMake;
+    //    string CarName;
+
+    //    public void SetCarDetails(string modelNo, string carCat, string carMake, string carName)
     //    {
-    //        string ModelNumber;
-    //        string CarCategory;
-    //        string CarMake;
-    //        string CarName;
-
-    //        public void SetCarDetails(string modelNo, string carCat, string carMake, string carName)
-    //        {
-    //            this.ModelNumber = modelNo;
-    //            this.CarCategory = carCat;
-    //            this.CarMake = carMake;
-    //            this.CarName = carName;
-    //        }
-
-    //        protected internal void GetCarDetails()
-    //        {
-    //            Console.WriteLine("{0},{1},{2},{3}", ModelNumber, CarCategory, CarMake, CarName);
-    //        }
+    //        this.ModelNumber = modelNo;
+    //        this.CarCategory = carCat;
+    //        this.CarMake = carMake;
+    //        this.CarName = carName;
     //    }
 
-    //    class Maruthi : Car
+    //    protected void GetCarDetails()
     //    {
-    //        public void GetMaruthiCarDetails()
-    //        {
-    //            GetCarDetails();
-    //        }
-
-    //        public static void Main(string[] a)
-    //        {
-    //            Maruthi maruti = new Maruthi();
-    //            maruti.SetCarDetails("ALTO LXI", "HATCH BACK", "MARUTI", "ALTO");
-    //            maruti.GetMaruthiCarDetails();
-    //            Console.ReadLine();
-    //        }
+    //        Console.WriteLine("{0},{1},{2},{3}", ModelNumber, CarCategory, CarMake, CarName);
     //    }
+    //}
+
+    //class Maruthi : Car
+    //{
+    //    public void GetMaruthiCarDetails()
+    //    {
+    //        GetCarDetails();
+    //    }
+
+    //    public static void Main(string[] a)
+    //    {
+    //        Maruthi maruti = new Maruthi();
+    //        maruti.SetCarDetails("ALTO LXI", "HATCH BACK", "MARUTI", "ALTO");
+    //        maruti.GetMaruthiCarDetails();
+    //        Console.ReadLine();
+    //    }
+    //}
+
     //}
     //    class pcp
     //    {
@@ -203,8 +204,8 @@ namespace CSharp
     //    internal class Base
     //    {
 
-    //        public virtual void disp()
-    //        public void disp()
+    //        //public virtual void disp()
+    //        //public void disp()
     //        public virtual void disp()
     //        {
     //            Console.WriteLine("Base Class");
@@ -218,14 +219,14 @@ namespace CSharp
     //        {
     //            Console.WriteLine("Derived class");
     //        }
-    //        public override void disp()
-    //        {
-    //            Console.WriteLine("Derived class");
-    //        }
-    //        public void disp()
-    //        {
-    //            Console.WriteLine("Derived class");
-    //        }
+    //        //public override void disp()
+    //        //{
+    //        //    Console.WriteLine("Derived class");
+    //        //}
+    //        //public void disp()
+    //        //{
+    //        //    Console.WriteLine("Derived class");
+    //        //}
 
     //        private static void Main()
     //        {
@@ -288,112 +289,112 @@ namespace CSharp
     //    }
     //}
     ////}
-    class Vehicle
-    {
-        protected double distance = 0.0;
-        protected double hour = 0.0;
-        protected double fuel = 0.0;
+    //    class Vehicle
+    //    {
+    //        protected double distance = 0.0;
+    //        protected double hour = 0.0;
+    //        protected double fuel = 0.0;
 
-        public Vehicle(double distance, double hour, double fuel)
-        {
-            this.distance = distance;
-            this.hour = hour;
-            this.fuel = fuel;
-        }
+    //        public Vehicle(double distance, double hour, double fuel)
+    //        {
+    //            this.distance = distance;
+    //            this.hour = hour;
+    //            this.fuel = fuel;
+    //        }
 
-        public void Average()
-        {
-            double average = 0.0;
-            average = distance / fuel;
-            Console.WriteLine("Vehicle Average is {0:0.00}", average);
-        }
+    //        public void Average()
+    //        {
+    //            double average = 0.0;
+    //            average = distance / fuel;
+    //            Console.WriteLine("Vehicle Average is {0:0.00}", average);
+    //        }
 
-        public virtual void Speed()
-        {
-            double speed = 0.0;
-            speed = distance / hour;
-            Console.WriteLine("Vehicle Speed is {0:0.00}", speed);
-        }
-    }
+    //        public virtual void Speed()
+    //        {
+    //            double speed = 0.0;
+    //            speed = distance / hour;
+    //            Console.WriteLine("Vehicle Speed is {0:0.00}", speed);
+    //        }
+    //    }
 
-    class Car : Vehicle
-    {
-        public Car(double distance, double hour, double fuel)
-            : base(distance, hour, fuel)
-        {
-            //base.distance = 0;
-            //base.hour = 0;
-            //base.fuel = 0;
-        }
-        new public void Average()
-        {
-            double average = 0.0;
-            average = distance / fuel;
-            Console.WriteLine("Car Average is {0:0.00}", average);
-        }
+    //    class Car : Vehicle
+    //    {
+    //        public Car(double distance, double hour, double fuel)
+    //            : base(distance, hour, fuel)
+    //        {
+    //            //base.distance = 0;
+    //            //base.hour = 0;
+    //            //base.fuel = 0;
+    //        }
+    //        new public void Average()
+    //        {
+    //            double average = 0.0;
+    //            average = distance / fuel;
+    //            Console.WriteLine("Car Average is {0:0.00}", average);
+    //        }
 
-        public override void Speed()
-        {
-            double speed = 0.0;
-            speed = distance / hour;
-            Console.WriteLine("Car Speed is {0:0.00}", speed);
-        }
-    }
+    //        public override void Speed()
+    //        {
+    //            double speed = 0.0;
+    //            speed = distance / hour;
+    //            Console.WriteLine("Car Speed is {0:0.00}", speed);
+    //        }
+    //    }
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            double distance, hour, fuel = 0.0;
-            Console.WriteLine("Enter the Distance");
-            distance = Double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Hours");
-            hour = Double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Fuel");
-            fuel = Double.Parse(Console.ReadLine());
-            Car objCar = new Car(distance, hour, fuel);
-            Vehicle objVeh = objCar;
-            objCar.Average();
-            objVeh.Average();
-            objCar.Speed();
-            objVeh.Speed();
-            Console.Read();
-        }
-    }
-}
+    //    class Program
+    //    {
+    //        static void Main(string[] args)
+    //        {
+    //            double distance, hour, fuel = 0.0;
+    //            Console.WriteLine("Enter the Distance");
+    //            distance = Double.Parse(Console.ReadLine());
+    //            Console.WriteLine("Enter the Hours");
+    //            hour = Double.Parse(Console.ReadLine());
+    //            Console.WriteLine("Enter the Fuel");
+    //            fuel = Double.Parse(Console.ReadLine());
+    //            Car objCar = new Car(distance, hour, fuel);
+    //            Vehicle objVeh = objCar;
+    //            objCar.Average();
+    //            objVeh.Average();
+    //            objCar.Speed();
+    //            objVeh.Speed();
+    //            Console.Read();
+    //        }
+    //    }
+    //}
 
-//internal class A
-//{
-//    public virtual void Test()
-//    {
-//        Console.WriteLine("A.Test");
-//    }
-//}
+    //internal class A
+    //{
+    //    public virtual void Test()
+    //    {
+    //        Console.WriteLine("A.Test");
+    //    }
+    //}
 
-//internal class B : A
-//{
-//    public override void Test()
-//    {
-//        Console.WriteLine("B.Test");
-//    }
-//}
+    //internal class B : A
+    //{
+    //    public override void Test()
+    //    {
+    //        Console.WriteLine("B.Test");
+    //    }
+    //}
 
-//internal class Program
-//{
-//    private static void Main()
-//    {
-//        // Compile-time type is A.
-//        // Runtime type is A as well.
-//        A ref1 = new A();
-//        ref1.Test();
+    //internal class Program
+    //{
+    //    private static void Main()
+    //    {
+    //        // Compile-time type is A.
+    //        // Runtime type is A as well.
+    //        A ref1 = new A();
+    //        ref1.Test();
 
-//        // Compile-time type is A.
-//        // Runtime type is B.
-//        A ref2 = new B();
-//        ref2.Test();
-//        //}
-//    }
-//}
+    //        // Compile-time type is A.
+    //        // Runtime type is B.
+    //        A ref2 = new B();
+    //        ref2.Test();
+    //        //}
+    //    }
+    //}
 
 //class Mybase
 //{

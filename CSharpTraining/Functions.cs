@@ -2,7 +2,7 @@
 
 namespace CSharpTraining
 {
-    class Functions
+    class FunctionClass
     {
         //<Access_Specifier><Access_Modifier><Return_Type><Function_Name>(<List_of_Comma_Separated_Parameters>)
         /*
@@ -16,7 +16,7 @@ namespace CSharpTraining
                 1. Similar to a variable, but will not have access specifier.
                 2. It could be of system defined type or user defined type.
         */
-
+       
         void Message()
         {
             Console.Write("This is a Sample Function!");
@@ -29,7 +29,10 @@ namespace CSharpTraining
 
         private void Subract(string a, string b)
         {
-            Console.WriteLine("The addition of {0} and {1}  is {2}", int.Parse(a), int.Parse(b), int.Parse(a) + int.Parse(b));
+            int.TryParse(a, out int numericA);
+            int.TryParse(b, out int numericB);
+            //Console.WriteLine("The addition of {0} and {1}  is {2}", int.Parse(a), int.Parse(b), int.Parse(a) + int.Parse(b));
+            Console.WriteLine("The addition of {0} and {1}  is {2}", numericA, numericB, numericA + numericB);
         }
 
         private void Subract(int a, int b, int c)
@@ -71,12 +74,12 @@ namespace CSharpTraining
         static void Main(string[] args)
         {
 
-            Functions objFunctions;
-            objFunctions = new Functions();
-
+            FunctionClass objFunctions;
+            objFunctions = new FunctionClass();
+            
             objFunctions.Message();
             objFunctions.Add(10, 20);
-            objFunctions.Subract("Srivatsan", "Seshadri");
+            objFunctions.Subract("Akshaya", "Kumar");
             objFunctions.Add(10.00M, 11.00M);
             int y = objFunctions.Sum(10, 20);
 
@@ -98,7 +101,7 @@ namespace CSharpTraining
             Console.WriteLine("The Value of result is {0}", b);
             Console.WriteLine("The Value of out parameter is {0}", a);
             func(new int[] { 1, 2, 3, 4 });
-            func(1, 2);
+            func(1, 2,3,4);
             func(1, 2, 3, 4, 5, 6, 7, 8);
         }
 

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharp
 {
@@ -16,7 +12,7 @@ namespace CSharp
        constructors or destructors
 
        An interface might not seem as all powerful as class,but interface can be used where a class can't.
-       A class can inherit from only one other class and can implement multiple interfaces.
+       A[ class can inherit from only one other class and can implement multiple interfaces.]
 
 
    //	*/
@@ -29,10 +25,7 @@ namespace CSharp
 
     //class Calculator : ICalculator
     //{
-    //    public int Add(int a, int b)
-    //    {
-    //        return a + b;
-    //    }
+
     //    public static void Main(string[] args)
     //    {
     //        ICalculator obj = new Calculator();
@@ -43,6 +36,11 @@ namespace CSharp
     //    static void Display(int a, int b, ICalculator calcObj)
     //    {
     //        Console.WriteLine("The Sum is {0}", calcObj.Add(a, b));
+    //    }
+
+    //    public int Add(int a, int b)
+    //    {
+    //        return a + b;
     //    }
     //}
 
@@ -135,8 +133,8 @@ namespace CSharp
     //        }
     //    }
     //}
-    //	Defining properties in an Interface
-    //    public interface IShape
+    ////Defining properties in an Interface
+    //  public interface IShape
     //    {
     //        int Sides { get; set; }
     //        double Area();
@@ -148,7 +146,6 @@ namespace CSharp
     //        {
 
     //        }
-
 
     //        public int Sides
     //        {
@@ -201,11 +198,10 @@ namespace CSharp
     //    {
     //        private int InSides;
 
-    //        public int Sides
+    //       public int Sides
     //        {
     //            get { return InSides; }
     //        }
-
     //        public double Area()
     //        {
     //            return ((double)(Sides * Sides));
@@ -302,14 +298,20 @@ namespace CSharp
     //    {
     //        public static void Main()
     //        {
-    //            Square mySquare = new Square();
-    //            mySquare.SideLength = 7;
-    //            IShape ish = mySquare;
-    //            IShapeDisplay ishd = mySquare;
+    //            //Square mySquare = new Square();
+    //            //mySquare.SideLength = 7;
+    //            //IShape ish = mySquare;
+    //            //IShapeDisplay ishd = mySquare;
 
+    //            //ish.Display();
+    //            //ishd.Display();
+
+    //            IShape ish = new Square();
+    //            //mySquare.SideLength = 7;
     //            ish.Display();
-    //            ishd.Display();
 
+    //            IShapeDisplay ishd = new Square();
+    //            ishd.Display();
     //        }
     //    }
     //}
@@ -354,7 +356,8 @@ namespace CSharp
 
     //            //myShape.Sides = myShape.ShapeShifter(myShape.Sides);  // ==> Error
 
-    //            IShape tmp = myShape;
+    //            //IShape tmp = myShape;
+    //            IShape tmp = new Shape();
 
     //            myShape.Sides = tmp.ShapeShifter(myShape.Sides);
 
@@ -398,7 +401,7 @@ namespace CSharp
     {
         public static void Main()
         {
-            Test b = new Test();
+            I3DShape b = new Test();
             //I3DShape a = new I3DShape();
             b.Area(); // first implement in some other class and then use it.
 

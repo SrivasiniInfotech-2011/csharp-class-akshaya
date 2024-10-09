@@ -59,79 +59,84 @@ namespace Mynamespace
         }
 
     }
-    //}
-    //class Test
-    //{
-    //    public static void Main()
-    //    {
-    //        Mynamespace.HelloWorld.SayHi();
-    //    }
-    //}
-
-    namespace Consts
-    {
-        public class PI
-        {
-            public static double value = 3.14159;
-            //		private PI(){}	//Private Constructor
-            PI() { }
-        }
-        public class three
-        {
-            public static int value = 3;
-            //		private three(){}	//Private Constructor
-            three() { }
-        }
-    }
-    namespace MyMath
-    {
-        public class Routine
-        {
-            public static long Add(params int[] harshni)
-            {
-                int ctr = 0;
-                long Answer = 0;
-                for (ctr = 0; ctr < harshni.Length; ctr++)
-                {
-                    Answer += harshni[ctr];
-                }
-                return Answer;
-            }
-
-            public static long Subtract(int arg1, int arg2)
-            {
-                long Answer = 0;
-                Answer = arg1 - arg2;
-                return Answer;
-            }
-        }
-
-
-    }
-
-    class MyMathApp
-    {
-        public static void Main()
-        {
-            long Result = 0;
-           
-            Result = MyMath.Routine.Add(1, 2, 3);
-            Console.WriteLine("Add Result is {0}", Result);
-
-            Result = MyMath.Routine.Subtract(5, 2);
-            Console.WriteLine("Subtract Result is {0}", Result);
-
-            Console.WriteLine("\n The Value of PI is {0}", Consts.PI.value);
-            Console.WriteLine("\n The Value of three is {0}", Consts.three.value);
-            HelloWorld obj = new HelloWorld();
-            Testing.HelloWorld.TestMessage();
-        }
-    }
 }
 
-namespace Testing {
-    public class HelloWorld {
-        public static void TestMessage() {
+//class Test
+//{
+//    public static void Main()
+//    {
+//        HelloWorld.SayHi();
+//        Mynamespace.HelloWorld.SayHi();
+//    }
+//}
+
+namespace Consts
+{
+    public class PI
+    {
+        public static double value = 3.14159;
+        //		private PI(){}	//Private Constructor
+        PI() { }
+    }
+    public class three
+    {
+        public static int value = 3;
+        //		private three(){}	//Private Constructor
+        three() { }
+    }
+}
+namespace MyMath
+{
+    public class Routine
+    {
+        public static long Add(params int[] harshni)
+        {
+            int ctr = 0;
+            long Answer = 0;
+            for (ctr = 0; ctr < harshni.Length; ctr++)
+            {
+                Answer += harshni[ctr];
+            }
+            return Answer;
+        }
+
+        public static long Subtract(int arg1, int arg2)
+        {
+            long Answer = 0;
+            Answer = arg1 - arg2;
+            return Answer;
+        }
+    }
+
+
+}
+
+class MyMathApp
+{
+    public static void Main()
+    {
+        long Result = 0;
+
+        Result = MyMath.Routine.Add(1, 2, 3);
+        Console.WriteLine("Add Result is {0}", Result);
+
+        Result = MyMath.Routine.Subtract(5, 2);
+        Console.WriteLine("Subtract Result is {0}", Result);
+
+        Console.WriteLine("\n The Value of PI is {0}", Consts.PI.value);
+        Console.WriteLine("\n The Value of three is {0}", Consts.three.value);
+        Mynamespace.HelloWorld obj = new Mynamespace.HelloWorld();
+        Testing.HelloWorld.TestMessage();
+    }
+}
+//}
+
+namespace Testing
+{
+    public class HelloWorld
+    {
+        public static void TestMessage()
+        {
             Console.WriteLine("I am from Testing.HelloWorld!");
         }
     }

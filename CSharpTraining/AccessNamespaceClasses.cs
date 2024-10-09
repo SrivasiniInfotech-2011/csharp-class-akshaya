@@ -1,6 +1,6 @@
 ﻿
-
-using Mynamespace.MyMath;
+using Mynamespace;
+using MyMath;
 
 namespace CSharp
 {

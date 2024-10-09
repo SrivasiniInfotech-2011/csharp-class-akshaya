@@ -51,7 +51,7 @@ namespace CSharpTraining
                     Console.WriteLine("The Division of {0} and {1} is : {2}", a, b, a / b);
                     break;
                 default:
-                    Console.WriteLine("The Division of {0} and {1} is : {2}", a, b, a / b);
+                    Console.WriteLine("Enter your Choice");
                     break;
             }
         }

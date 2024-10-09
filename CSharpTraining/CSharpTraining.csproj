@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <StartupObject>CSharpTraining.Loops</StartupObject>
+    <StartupObject>CSharp.Hide</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
